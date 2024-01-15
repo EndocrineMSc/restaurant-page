@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Brightsun";
+    src: url(./fonts/brightsun.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "ColoringRainbow";
+    src: url(./fonts/colouring_rainbow.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "FruitsDays";
+    src: url(./fonts/fruits_days.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Sandwich";
+    src: url(./fonts/sandwich.otf) format("opentype");
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content img{
+    width: min(60vw, 512px);
+}
