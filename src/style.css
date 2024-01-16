@@ -141,3 +141,9 @@ body {
     font-family: "Brightsun";
     margin: 20px;
 }
+
+.drinks-wrapper {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 30px;
+}

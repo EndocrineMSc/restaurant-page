@@ -1,6 +1,7 @@
 import "./style.css";
 import { landingPage } from "./landingPage";
 import { foodPage } from "./foodPage";
+import { drinksPage } from "./drinksPage";
 
 function toggleActiveButton(event) {
     event.target.classList.add("active");
@@ -31,6 +32,9 @@ foodButton.addEventListener("click", toggleActiveButton);
 const drinksButton = document.createElement("button");
 drinksButton.id = "drinks-button";
 drinksButton.textContent = "Drinks";
+drinksButton.addEventListener("click", drinksPage.render);
+drinksButton.addEventListener("click", toggleActiveButton);
+
 
 sideBar.appendChild(homeButton);
 sideBar.appendChild(foodButton);
