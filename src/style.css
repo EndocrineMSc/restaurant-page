@@ -18,20 +18,30 @@
     src: url(./fonts/sandwich.otf) format("opentype");
 }
 
+:root {
+    --bg-color: #ecf2cf;
+    --bg-color-side: #c2c33a;
+    --active-button-color: #cdd76d;
+}
+
 body {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr;
     height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
 }
 
 #side-bar {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: blue;
-    padding-top: 50px;
-    gap: 50px;
+    justify-content: center;
+    background-color: var(--bg-color-side);
+    width: min(90vw, 1500px);
+    justify-self: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 #side-bar button {
@@ -39,10 +49,16 @@ body {
     border: none;
     font-family: "Brightsun";
     font-size: 4rem;
+    height: 100%;
+    width: 20%;
 }
 
-#sid-bar button:hover {
-    filter: brightness(0.8);
+#side-bar button:hover, #side-bar button.active:hover {
+    filter: brightness(0.75);
+}
+
+#side-bar button.active {
+    background-color: var(--active-button-color);
 }
 
 #content {
@@ -51,7 +67,7 @@ body {
     align-items: center;
     padding: 30px;
     gap: 30px;
-    background-color: aquamarine;
+    background-color: var(--bg-color);
 }
 
 #content img {
@@ -71,4 +87,57 @@ body {
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: 0.15rem;
+}
+
+.welcome:first-child {
+    font-size: 4rem;
+    align-self: center;
+    font-weight: 550;
+    letter-spacing: 0.25rem;
+    text-decoration: black wavy underline;
+    margin-bottom: 20px;
+}
+
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+.menu-items-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: fit-content;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 512px;
+    height: 100%;
+}
+
+.menu-item :first-child {
+    font-size: 4rem;
+    font-family: "Sandwich";
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.menu-item :last-child {
+    font-family: "FruitsDays";
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.menu-section-header {
+    font-size: 6rem;
+    font-family: "Brightsun";
+    margin: 20px;
 }
