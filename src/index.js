@@ -1,7 +1,7 @@
 import "./style.css";
-import { landingPage } from "./landingPage";
-import { foodPage } from "./foodPage";
-import { drinksPage } from "./drinksPage";
+import { landingPage } from "./landingPage.js";
+import { foodPage } from "./foodPage.js";
+import { drinksPage } from "./drinksPage.js";
 
 function toggleActiveButton(event) {
     event.target.classList.add("active");
