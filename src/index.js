@@ -1,5 +1,6 @@
 import "./style.css";
 import { landingPage } from "./landingPage";
+import { foodPage } from "./foodPage";
 
 const sideBar = document.getElementById("side-bar");
 
@@ -11,6 +12,7 @@ homeButton.addEventListener("click", landingPage.render);
 const foodButton = document.createElement("button");
 foodButton.id = "food-button";
 foodButton.textContent = "Food";
+foodButton.addEventListener("click", foodPage.render);
 
 const drinksButton = document.createElement("button");
 drinksButton.id = "drinks-button";
@@ -20,4 +22,4 @@ sideBar.appendChild(homeButton);
 sideBar.appendChild(foodButton);
 sideBar.appendChild(drinksButton);
 
-//
+landingPage.render();
