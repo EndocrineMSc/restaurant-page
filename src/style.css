@@ -18,12 +18,57 @@
     src: url(./fonts/sandwich.otf) format("opentype");
 }
 
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+    padding-top: 50px;
+    gap: 50px;
+}
+
+#side-bar button {
+    background-color: inherit;
+    border: none;
+    font-family: "Brightsun";
+    font-size: 4rem;
+}
+
+#sid-bar button:hover {
+    filter: brightness(0.8);
+}
+
 #content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px;
+    gap: 30px;
+    background-color: aquamarine;
 }
 
-#content img{
-    width: min(60vw, 512px);
+#content img {
+    border-radius: 15px;
+}
+
+#landing-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: min(80vw, 1000px);
+}
+
+.welcome {
+    white-space: pre-wrap;
+    font-family: "FruitsDays";
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
 }
