@@ -1,10 +1,23 @@
 import "./style.css";
-import Banner from "./img/interior.png"; 
 import { landingPage } from "./landingPage";
 
-const element = document.getElementById("content");
+const sideBar = document.getElementById("side-bar");
 
-const myBanner = new Image();
-myBanner.src = Banner;
+const homeButton = document.createElement("button");
+homeButton.id = "home-button";
+homeButton.textContent = "Home";
+homeButton.addEventListener("click", landingPage.render);
 
-element.appendChild(myBanner);
+const foodButton = document.createElement("button");
+foodButton.id = "food-button";
+foodButton.textContent = "Food";
+
+const drinksButton = document.createElement("button");
+drinksButton.id = "drinks-button";
+drinksButton.textContent = "Drinks";
+
+sideBar.appendChild(homeButton);
+sideBar.appendChild(foodButton);
+sideBar.appendChild(drinksButton);
+
+//
